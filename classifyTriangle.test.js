@@ -76,7 +76,7 @@ describe('classifyTriangle: Required input conditions -  See readme for more det
 
     //ECP
 
-    test('ECP1: should classify an Isosceles triangle', () => {
+    test('ECP1: should classify an Isosceles triangle (a=b)', () => {
       expect(classifyTriangle(5, 5, 7)).toBe('Isosceles');
     });
 
@@ -84,7 +84,7 @@ describe('classifyTriangle: Required input conditions -  See readme for more det
       expect(classifyTriangle(5, 5, 12)).toBe('Not a Triangle');
     });
 
-    test('ECP3: should classify an Isosceles triangle', () => {
+    test('ECP3: should classify an Isosceles triangle (a=c)', () => {
       expect(classifyTriangle(5, 9, 5)).toBe('Isosceles');
     });
 
@@ -112,7 +112,7 @@ describe('classifyTriangle: Required input conditions -  See readme for more det
       expect(classifyTriangle(100, 101, 102)).toBe('Scalene');
     });
 
-    test('ECP10: Not a Triangle', () => {
+    test('ECP10: Not a Triangle (looks valid but c = a+ b', () => {
       expect(classifyTriangle(1, 2, 3)).toBe('Not a Triangle');
     });
 
